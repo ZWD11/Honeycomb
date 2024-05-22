@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "tabbarbtn": "../../../components/tabbarbtn/tabbarbtn"
+    }
+}

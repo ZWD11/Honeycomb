@@ -1,0 +1,92 @@
+<!--miniprogram/pages/index/toCostNew/toCostNew.wxml-->
+<!-- <text>miniprogram/pages/index/toCostNew/toCostNew.wxml</text> -->
+<view>
+  <view class="btn-list">
+    <button type="primary" size="mini" data-url="formList/formList" bindtap="toUrl">查看表单</button>
+    <button type="primary" size="mini" bindtap="reflesh">刷新</button>
+  </view>
+
+  <myCalendar 
+    showTitle="消费记录"
+    flagImg="{{flagImg}}"
+    bind:select="select" 
+    bind:today="today" 
+    id="calendar"
+  >
+  </myCalendar>
+
+  <view class="btn-list">
+    <button type="primary" size="mini" bindtap="saveCost">确定</button>
+  </view>
+
+  <view class="tabbarList">
+    <view wx:for="{{tabbar}}" 
+          data-id="{{item.id}}" 
+          wx:key="item.id" 
+          class="{{chooseTabbar == item.id ? 'tabbar selected' : 'tabbar'}}"
+          bindtap="tabClick"
+    >
+      <image data-id="{{item.id}}" bindtap="tabClick" src="{{item.icon}}" class="tabbarIcon"></image>
+    </view>
+  </view>
+  <view class="form-list">
+  <view class="form-item-title-box">
+    <view class="form-item-cost-all">
+      总消费:￥{{allCost}}
+    </view>
+  </view>
+    <view class="form-item" wx:for="{{formList}}" wx:key="_id">
+      <view class="form-item-title-box" data-index="{{index}}" catchtap="showContent" >
+        <view class="form-item-title">
+          {{item._id}}
+        </view>
+        <view class="form-item-cost">
+          ￥{{cost[item._id].cost}}
+        </view>
+        <view class="form-item-icon" wx:if="{{!delBtnList[index]}}">
+          >
+        </view>
+        <view class="form-item-icon" wx:if="{{delBtnList[index]}}">
+          ∨
+        </view>
+        <view class="form-item-delete" wx:if="{{delBtnShow}}" data-index="{{index}}" data-id="{{item._id}}" catchtap="deleteItem">X</view>
+      </view>
+      <view class="form-item-content" wx:if="{{delBtnList[index]}}">
+        <view bindtap="showAddFormItemModal" 
+              class="form-item-content-add"
+              data-id="{{item._id}}"
+              >
+              自定义添加
+        </view>
+        <view class="form-item-content-item" wx:for-item="item2" wx:for-index="index2" wx:for="{{item.list}}" wx:key="index2">
+          <text class="form-item-content-item-text">{{item2}}:</text>
+          <input type="digit" 
+                data-id="{{item._id}}" 
+                data-prop="{{item2}}" 
+                data-value="{{cost[item._id][item2]}}"
+                bind:input="onChange" 
+                bind:blur="bindblur"
+                placeholder="请输入" 
+                value="{{cost[item._id][item2]}}"
+                class="form-item-content-item-input"/>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{!hiddenmodalput}}"></view>
+  <view class="modal-dialog" wx:if="{{!hiddenmodalput}}">
+      <view class="modal-title">{{tip}}</view>
+      <view class="modal-content">
+          <view class="modal-input">
+              <input bindinput="inputTheme" class="input" maxlength="20" placeholder="项目" placeholderClass="input-holder" type="text" value="{{theme}}"></input>
+          </view>
+          <view class="modal-input">
+              <input bindinput="inputMark" class="input" maxlength="20" placeholder="金额" placeholderClass="input-holder" type="text" value="{{mark}}"></input>
+          </view>
+      </view>
+      <view class="modal-footer">
+          <view bindtap="cancel" class="btn-cancel" data-status="cancel">取消</view>
+          <view bindtap="addItem" class="btn-confirm" data-status="confirm">确定</view>
+      </view>
+  </view>
+</view>

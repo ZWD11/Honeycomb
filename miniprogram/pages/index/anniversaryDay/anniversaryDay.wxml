@@ -1,0 +1,54 @@
+<!--miniprogram/pages/index/anniversaryDay/anniversaryDay.wxml-->
+<view class="anniversary-day">
+  <view class="anniversary-day-content">
+    <image class="bg-img" src="cloud://it-cloud-hdrd7.6974-it-cloud-hdrd7-1300036058/记账本/星星壁纸.jpg"></image>
+    <view wx:if="{{tabind == 0}}" class="anniversary-day-content-view">
+      <view class="anniversary-day-content-list">
+        <view wx:for="{{allDayList}}" data-ind="{{index}}"  data-id="{{item._id}}" bindlongtap="delItem" wx:key="_id" class="anniversary-day-content-list-item">
+          <view class="item-title">
+            <text class="hight-light">{{item.date + ' '}}{{item.time + ' '}}</text>我们
+            <text class="hight-light">{{item.title}}了</text>
+          </view>
+          <view class="item-title">
+            <text>已经<text class="hight-light">{{item.formatDate}}</text></text>
+          </view>
+          <view class="item-title">
+            <text>今天是我们{{item.title}}的第<text class="hight-light">{{item.days}}</text>天</text>
+          </view>
+          <view class="item-title">
+            <text>{{item.descript}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="linear d-text" wx:if="{{allDayList.length > 0}}">未来还很长，我们一起走……</view>
+    </view>
+    <view  wx:if="{{tabind == 1}}" class="anniversary-day-content-add">
+      <view class="add-content-body">
+        <view class="add-content-title">添加纪念日</view>
+        <view class="modal-input">
+            <input bindinput="inputTitle" class="input" maxlength="20" placeholder="主题" placeholderClass="input-holder" type="text" value="{{title}}"></input>
+        </view>
+        <view class="modal-input">
+              <textarea bindinput="inputDescript" auto-height class="textarea" maxlength="50" placeholder="描述" placeholderClass="input-holder" type="text" value="{{descript}}"></textarea>
+        </view>
+        <view class="modal-input">
+              <picker bindchange="changeDate" class="input-holder" end="2100-01-01" mode="date" value="{{nowdate}}">
+                  <input class="input" disabled="ture" maxlength="20" placeholder="日期" placeholderClass="input-holder" type="text" value="{{nowdate}}"></input>
+              </picker>
+          </view>
+          <view class="modal-input">
+              <picker bindchange="changeTime" class="in" mode="time" start="">
+                  <input class="input" disabled="ture" maxlength="20" placeholder="具体时间" placeholderClass="input-holder" type="text" value="{{nowtime}}"></input>
+              </picker>
+          </view>
+        <view class="add-content-footer">
+          <view bindtap="reset" class="reset-btn btn">重置</view>
+          <view bindtap="add" class="add-btn btn">添加</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="anniversary-day-bar-list">
+    <tabbarbtn bind:changeTabs="changeTabs" id="tabbarbtn" tabinf="{{tabinf}}"></tabbarbtn>
+  </view>
+</view>

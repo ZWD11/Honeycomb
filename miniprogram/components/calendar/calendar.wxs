@@ -1,0 +1,8 @@
+var filter = ({
+    defineIndexOf: (function(str, val) {
+        return (str.indexOf(val))
+    }),
+});
+module.exports = ({
+    indexOf: filter.defineIndexOf,
+});

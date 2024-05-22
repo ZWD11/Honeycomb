@@ -1,0 +1,108 @@
+{
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/index/physiologicalPeriodPage/physiologicalPeriodPage",
+          "pathName": "pages/index/physiologicalPeriodPage/physiologicalPeriodPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/costPage/costPage",
+          "pathName": "pages/index/costPage/costPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "消费记录",
+          "pathName": "pages/index/toCostNew/toCostNew",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "表单管理",
+          "pathName": "pages/index/toCostNew/formList/formList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "睡觉打卡",
+          "pathName": "pages/index/sleepClock/sleepClock",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/sleepModule/sleepIndex",
+          "pathName": "pages/index/sleepModule/sleepIndex",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "打卡统计",
+          "pathName": "pages/index/sleepClock/sleepStatistical/sleepStatistical",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/costPage/costPage",
+          "pathName": "pages/index/costPage/costPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/statistical/statistical",
+          "pathName": "pages/statistical/statistical",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/wishTreePage/wishTreePage",
+          "pathName": "pages/index/wishTreePage/wishTreePage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/anniversaryDay/anniversaryDay",
+          "pathName": "pages/index/anniversaryDay/anniversaryDay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/loopPic/loopPic",
+          "pathName": "pages/index/loopPic/loopPic",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/filmPage/filmPage",
+          "pathName": "pages/index/filmPage/filmPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/passwordBox/passwordBox",
+          "pathName": "pages/index/passwordBox/passwordBox",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/physiologicalPeriodPage/physiologicalPeriodPage",
+          "pathName": "pages/index/physiologicalPeriodPage/physiologicalPeriodPage",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "%E5%B0%8F%E7%AA%9D"
+}

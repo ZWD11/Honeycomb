@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "loopimg": "../../../components/loopimg/loopimg"
+  },
+  "navigationBarTitleText": "轮播图设置"
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabBarBtn": "../../../../components/tabbarbtn/tabbarbtn"
+  },
+  "component": true,
+  "navigationBarTitleText":"睡觉打卡统计"
+}

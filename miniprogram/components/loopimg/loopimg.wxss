@@ -1,0 +1,11 @@
+.swiper {
+    width: 100%;
+    height: 350px;
+}
+
+.slide-image {
+    width: 100%;
+    height: 130%;
+    border-radius: 5%;
+    object-fit: contain;
+}

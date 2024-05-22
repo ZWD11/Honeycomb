@@ -1,0 +1,39 @@
+.charts {
+  border: 2px solid #2E3E5B;
+  width: 99%;
+  border-radius: 8%;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: darkgray 0px 0px 6px 3px;
+}
+
+.title {
+  margin-top: 20px;
+  margin-left: 15px;
+  color: RGB(46,62,91);
+  text-align: center;
+}
+
+.y {
+  border-right: 2px solid black;
+  position: relative;
+  left: 20px;
+}
+
+.x {
+  border-top: 2px solid black;
+  position: relative;
+  width: 99%;
+  margin: 0 auto;
+}
+
+.image-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  margin-left: 1vw;
+  color: white;
+}

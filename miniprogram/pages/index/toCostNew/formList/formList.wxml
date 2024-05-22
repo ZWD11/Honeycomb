@@ -1,0 +1,70 @@
+<!--miniprogram/pages/index/toCostNew/formList/formList.wxml-->
+<!-- <text>miniprogram/pages/index/toCostNew/formList/formList.wxml</text> -->
+<!-- <collapse>
+  <view>
+    111
+  </view>
+</collapse> -->
+<view class="body">
+  <view class="top-btn-box">
+    <button type="primary" size="mini" bindtap="showAddFormItem">添加表单</button>
+    <button type="warn" size="mini" bindtap="showDelFormItem" wx:if="{{!delBtnShow}}">删除表单</button>
+    <button type="warn" size="mini" bindtap="showDelFormItem" wx:if="{{delBtnShow}}">取消</button>
+  </view>
+  <view class="form-list">
+    <view class="form-item" wx:for="{{formList}}" wx:key="_id">
+      <view class="form-item-title-box" data-index="{{index}}" catchtap="showContent" >
+        <view class="form-item-title">
+          {{item._id}}
+        </view>
+        <view class="form-item-icon" wx:if="{{!delBtnList[index]}}">
+          >
+        </view>
+        <view class="form-item-icon" wx:if="{{delBtnList[index]}}">
+          ∨
+        </view>
+        <view class="form-item-delete" wx:if="{{delBtnShow}}" data-index="{{index}}" data-id="{{item._id}}" catchtap="deleteItem">X</view>
+      </view>
+      <view class="form-item-content" wx:if="{{delBtnList[index]}}">
+        <view class="item-content-btn-box">
+          <button type="primary" size="mini" data-id="{{item._id}}" data-index="{{index}}" bindtap="showAddFormItemItem">添加项目</button>
+        </view>
+        <view class="form-item-content-item" wx:for-item="item2" wx:for-index="index2" wx:for="{{item.list}}" wx:key="index2">
+          <text class="form-item-content-item-text">{{item2}}</text>
+          <view class="form-item-content-item-delete" data-item="{{item2}}" data-id="{{item._id}}" data-index2="{{index2}}" data-index="{{index}}" catchtap="removeItem">-</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{!hiddenmodalput1}}"></view>
+<view class="modal-dialog" wx:if="{{!hiddenmodalput1}}">
+    <view class="modal-title">{{tip}}</view>
+    <view class="modal-content">
+        <view class="modal-input">
+            <input bindinput="inputItem" class="input" maxlength="20" placeholder="项目名" placeholderClass="input-holder" type="text" value="{{item}}"></input>
+        </view>
+    </view>
+    <view class="modal-footer">
+        <view bindtap="cancelAddFormItemItem" class="btn-cancel" data-status="cancel">取消</view>
+        <view bindtap="confirmAddFormItemItem" class="btn-confirm" data-status="confirm">确定</view>
+    </view>
+</view>
+
+<view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{!hiddenmodalput}}"></view>
+<view class="modal-dialog" wx:if="{{!hiddenmodalput}}">
+    <view class="modal-title">{{tip}}</view>
+    <view class="modal-content">
+        <view class="modal-input">
+            <input bindinput="inputTheme" class="input" maxlength="20" placeholder="表单名" placeholderClass="input-holder" type="text" value="{{theme}}"></input>
+        </view>
+        <view class="modal-input">
+            <textarea bindinput="inputMark" class="mark" maxlength="-1" placeholder="备注" value="{{mark}}"></textarea>
+        </view>
+    </view>
+    <view class="modal-footer">
+        <view bindtap="cancelAddFormItem" class="btn-cancel" data-status="cancel">取消</view>
+        <view bindtap="confirmAddFormItem" class="btn-confirm" data-status="confirm">确定</view>
+    </view>
+</view>

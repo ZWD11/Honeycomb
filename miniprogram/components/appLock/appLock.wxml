@@ -1,0 +1,31 @@
+<!--components/appLock/appLock.wxml-->
+<view style="width:100%;height:100%">
+        <view
+            id="j-apps-lock-body"
+            class="j-apps-lock-body"
+            bindtouchstart="mousedown"
+            bindtouchmove="mouseover"
+            bindtouchend="mouseup"
+        >
+            <view
+                id="{{JAppsLockId + 'lock'}}"
+                class="j-apps-lock"
+            >
+                <view class="j-apps-lock-cells">
+                    <view
+                        class="j-apps-lock-cell"
+                        wx:for="{{size * size}}"
+                        wx:key="index"
+                        data-id="{{index}}"
+                        style="border:{{showBorder[index] ? '1px solid gray' : '1px solid transparent'}}"
+                    >
+                        <view
+                            id="{{'point-' + index}}"
+                            class="j-apps-lock-point"
+                            data-id="{{index}}"
+                        ></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>

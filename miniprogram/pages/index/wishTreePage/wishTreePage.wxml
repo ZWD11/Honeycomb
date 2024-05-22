@@ -1,0 +1,51 @@
+<view wx:if="{{choose==0}}">
+    <image class="img" src="{{treeImg}}"></image>
+    <view bindtap="addbtn" class="add" style="top:6vh;left:39vw;">许愿</view>
+    <view class="" wx:for="{{wish1}}" wx:key="index">
+        <image bindlongpress="deletebtn" bindtap="check" class="like" data-id="{{index}}" mode="heightFix" src="{{userConfig[item.username].wishIcon}}" style="top:{{wishlocal[index][0]}}vh;left:{{wishlocal[index][1]}}vw;transform:rotate({{wishlocal[index][2]}}deg);"></image>
+    </view>
+</view>
+<view wx:if="{{choose==1}}">
+    <view bindlongpress="delCost" bindtap="click" class="view_tupian_wenzi" data-id="{{index}}" id="{{index}}" style="background-color:{{userConfig[item.username].color}};" wx:if="{{item.achive==1}}" wx:for="{{wish2}}" wx:key="index">
+        <image class="image_1" src="{{wishPoolImg}}"></image>
+        <view class="view_wenzi2" data-id="{{index}}">
+            <text>{{userConfig[item.username].nickName}}的心愿--{{item.wish}}</text>
+            <text class="">{{item.wishdetail}}</text>
+            <text class="">{{item.achivetime}}</text>
+        </view>
+    </view>
+</view>
+<view class="tabBar">
+    <view class="tabBar-item">
+        <view bindtap="addWish">
+            <image class="tabBar-icon" src="{{wishPoolImg}}" wx:if="{{choose==1}}"></image>
+            <image class="tabBar-icon" src="{{wishPoolImg1}}" wx:if="{{choose==0}}"></image>
+        </view>
+        <view bindtap="addWish" class="">许愿</view>
+    </view>
+    <view class="tabBar-item">
+        <view bindtap="completeWish">
+            <image class="tabBar-icon" src="{{wishImg}}" wx:if="{{choose==0}}"></image>
+            <image class="tabBar-icon" src="{{wishImg1}}" wx:if="{{choose==1}}"></image>
+        </view>
+        <view bindtap="completeWish" class="">已实现</view>
+    </view>
+</view>
+<view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{!hiddenmodalput}}"></view>
+<view catchtouchmove="preventTouchMove" class="modal-dialog" wx:if="{{!hiddenmodalput}}">
+    <view class="modal-title">{{tip}}</view>
+    <view class="modal-content">
+        <view class="modal-input">
+            <input bindinput="inputWish" class="input" disabled="{{flag>0}}" maxlength="20" placeholder="心愿" placeholderClass="input-holder" type="text" value="{{wish}}"></input>
+        </view>
+        <view class="modal-input">
+            <input bindinput="inputDetail" class="input" disabled="{{flag>0}}" maxlength="100" placeholder="详细" placeholderClass="input-holder" type="text" value="{{wishdetail}}"></input>
+        </view>
+    </view>
+    <view class="modal-footer">
+        <view bindtap="cancel" class="btn-cancel" data-status="cancel">取消</view>
+        <view bindtap="confirm" class="btn-confirm" data-status="confirm" wx:if="{{flag==0}}">许愿</view>
+        <view bindtap="update" class="btn-update" data-status="confirm" wx:if="{{flag==1}}">完成</view>
+        <view bindtap="delete" class="btn-delete" data-status="confirm" wx:if="{{flag==2}}">删除</view>
+    </view>
+</view>

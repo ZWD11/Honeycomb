@@ -1,0 +1,52 @@
+<view class="ftitle">{{title}}</view>
+<view class="tabpage" wx:for="{{allFilm}}" wx:key="index">
+    <view wx:if="{{item.watch==choose}}">
+        <view bindlongtap="del" class="film" data-id="{{index}}" wx:if="{{item.watch==1}}">
+            <scroll-view class="title">
+                《{{item.filmname}}》
+                <view class="name">
+                    {{userConfig[item.username].nickName}}--{{item.time}}
+                </view>
+            </scroll-view>
+            <scroll-view scrollY class="int">{{item.inf}}</scroll-view>
+            <scroll-view scrollY class="feel">{{item.feel}}</scroll-view>
+        </view>
+        <view class="film" bindlongtap="del" class="film" data-id="{{index}}" wx:if="{{item.watch==0}}">
+            <view class="to-watch">
+                <scroll-view class="to-watch-film">
+                    《{{item.filmname}}》
+                    <view class="name">
+                        --{{userConfig[item.username].nickName}}
+                    </view>
+                </scroll-view>
+                <scroll-view scrollY class="int">{{item.inf}}</scroll-view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtouchend="buttonEnd" bindtouchstart="buttonStart" catchtap="add" catchtouchmove="buttonMove" class="addbtn" style="top: 1081rpx; left: 535rpx; position: fixed">
+    <image class="addimg" src="{{addImg1}}" style="position: relative; left: 124rpx; top: 168rpx"></image>
+</view>
+<view class="tabBar">
+    <view class="tabBar-item">
+        <view bindtap="changeTab" data-id="0">
+            <image class="tabBar-icon" src="{{watchImg}}" wx:if="{{choose==1}}"></image>
+            <image class="tabBar-icon" src="{{watchImg1}}" wx:if="{{choose==0}}"></image>
+        </view>
+        <view bindtap="changeTab" class="" data-id="0">未看</view>
+    </view>
+    <view class="tabBar-item">
+        <view bindtap="changeTab" data-id="1">
+            <image class="tabBar-icon" src="{{watchHistoryImg}}" wx:if="{{choose==0}}"></image>
+            <image class="tabBar-icon" src="{{watchHistoryImg1}}" wx:if="{{choose==1}}"></image>
+        </view>
+        <view bindtap="changeTab" class="" data-id="1">观看记录</view>
+    </view>
+</view>
+<modalDialog bind:inputItem="inputItem" 
+            bind:cancel="cancel" 
+            bind:confirm="confirm" 
+            hiddenmodalput="{{hiddenmodalput}}" 
+            formData="{{formData}}"
+            tip="{{tip}}">
+</modalDialog>

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "calendar": "../../../components/calendar/calendar",
+        "modalDialog": "../../../components/modalDialog/modalDialog"
+    },
+    "navigationBarTitleText": "我和我的乖乖"
+}

@@ -1,0 +1,7 @@
+<swiper autoplay="{{autoplay}}" class="swiper" 
+        duration="{{duration}}" indicatorDots="{{indicatorDots}}" 
+        interval="{{interval}}" circular="{{circular}}">
+    <swiper-item wx:for="{{imgUrls}}" wx:key="key">
+        <image bindlongtap="delImg" data-id="{{item._id}}" data-img="{{item.img}}" class="slide-image" src="{{item.img}}"  mode="aspectFill"></image>
+    </swiper-item>
+</swiper>

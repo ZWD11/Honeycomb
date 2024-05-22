@@ -1,0 +1,36 @@
+/* components/appLock/appLock.wxss */
+.j-apps-lock-body {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  padding: 5px;
+  background-color: #ecdeb9;
+  display: flex;
+  justify-content: center;
+}
+.j-apps-lock {
+  position: relative;
+  margin: auto;
+}
+.j-apps-lock-cells {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.j-apps-lock-cell {
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  width: 26vw;
+  height: 26vw;
+  margin-top: 2vw;
+}
+.j-apps-lock-point {
+  width: 40%;
+  height: 40%;
+  justify-content: center;
+  background-color: rgb(187, 183, 183);
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+}

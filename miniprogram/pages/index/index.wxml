@@ -1,0 +1,47 @@
+  <view class="page">
+      <view class="left">
+          <text class="text">生活</text>
+      </view>
+      <view class="left" style="width: 750rpx; height: 64rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+          <text class="text1">保持热爱，奔赴山河</text>
+      </view>
+
+      <view class="loopimg-container">
+    <loopimg id="loopimg" originImgUrls="{{originImgUrls}}" style="position: relative; left: 0rpx; top: 0rpx"></loopimg>
+  </view>
+      <view class="left1" style="width: 750rpx; height: 106rpx; display: block; box-sizing: border-box; position: relative; left: 1rpx; top: 20rpx">
+          <text class="text2" style="position: relative; left: -30rpx; top: -10rpx; font-family: XingKai">今天月色很美</text>
+      </view>
+      <view class="left">
+          <text class="text3" style="position: relative; left: 78rpx; top: -30rpx; font-family: Arial">月亮也很柔</text>
+      </view>
+      <view class="button" style="width: 750rpx; height: 700rpx; display: flex; box-sizing: border-box">
+          <view wx:for="{{buttonList}}" wx:key="index">
+              <view>
+                  <!-- bindtap="{{item.btap}}"  -->
+                  <image data-url="{{item.url}}" bindtap="toUrl" class="image1" src="{{item.bimg}}"></image>
+              </view>
+              <view class="buttontip">
+                  <text class="text4">{{item.btip}}</text>
+              </view>
+          </view>
+      </view>
+  </view>
+  <view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{!hiddenmodalput}}"></view>
+  <view catchtouchmove="preventTouchMove" class="modal-dialog" wx:if="{{!hiddenmodalput}}">
+      <view class="modal-title">{{tip}}</view>
+      <view class="modal-content">
+          <view class="modal-input">
+              <input bindinput="inputUsername" class="input" maxlength="20" placeholder="用户名" placeholderClass="input-holder" type="text" value="{{username}}"></input>
+          </view>
+          <view class="modal-input">
+              <input bindinput="inputPassword" class="input" maxlength="20" placeholder="密码" placeholderClass="input-holder" type="text" value="{{password}}"></input>
+          </view>
+      </view>
+      <view class="modal-footer">
+          <navigator class="btn-cancel" openType="exit" target="miniProgram">
+        退出
+      </navigator>
+          <view bindtap="confirm" class="btn-confirm" data-status="confirm">确定</view>
+      </view>
+  </view>

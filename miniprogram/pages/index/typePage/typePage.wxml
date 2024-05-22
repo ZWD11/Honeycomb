@@ -1,0 +1,33 @@
+<view class="page">
+    <view class="title">我的标签</view>
+    <view class="image-parent">
+        <view class="img-group" wx:for="{{myType}}" wx:key="index">
+            <image bindlongpress="delType" bindtap="showDetail" class="image" data-id="{{index}}" mode="widthFix" src="{{flagImg1}}"></image>
+            <view bindlongpress="delType" bindtap="showDetail" class="child" data-id="{{index}}">#{{item}}</view>
+        </view>
+    </view>
+    <view class="tabBar">
+        <view class="tabBar-item">
+            <view bindtap="addType">
+                <image class="tabBar-icon" src="{{addImg}}"></image>
+            </view>
+            <view bindtap="addType" class="">添加新标签</view>
+        </view>
+    </view>
+    <view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{!hiddenmodalput}}"></view>
+    <view class="modal-dialog" wx:if="{{!hiddenmodalput}}">
+        <view class="modal-title">{{tip}}</view>
+        <view class="modal-content">
+            <view class="modal-input">
+                <input bindinput="inputTheme" class="input" maxlength="20" placeholder="标签名" placeholderClass="input-holder" type="text" value="{{theme}}"></input>
+            </view>
+            <view class="modal-input">
+                <textarea bindinput="inputMark" class="mark" maxlength="-1" placeholder="备注" value="{{mark}}"></textarea>
+            </view>
+        </view>
+        <view class="modal-footer">
+            <view bindtap="cancel" class="btn-cancel" data-status="cancel">取消</view>
+            <view bindtap="confirm" class="btn-confirm" data-status="confirm">确定</view>
+        </view>
+    </view>
+</view>

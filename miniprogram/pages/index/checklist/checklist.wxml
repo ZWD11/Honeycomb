@@ -1,0 +1,64 @@
+<!--pages/index/checklist/checklist.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="slogan">每天打卡一点点</text>
+  </view>
+  <view wx:if="{{choose == 0}}">
+    <view class="checklist">
+      <view wx:for="{{allcheck}}" wx:key="index" class="checklist-item">
+        <view class="item-container" data-id="{{index}}">
+          <view class="check">
+            <view class="item-header">
+              <text class="item-name">{{item.username}}打卡项目：{{item.check}}</text>
+              <view class="icon-right">
+                <image src="/images/right.png" class="right-arrow"></image>
+              </view>
+            </view>
+            <text class="item-description">项目描述：{{item.inf}}</text>
+          </view>
+          <view class="button-group">
+            <button class="complete-button" bindtap="completeCheck" data-id="{{index}}">完成</button>
+            <button class="delete-button" bindtap="deleteItem" data-id="{{item._id}}">删除</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view bindtap="addNewItem" class="add-button">
+      <image class="add-img" src="{{addImg1}}"></image>
+    </view>
+  </view>
+  <view wx:if="{{choose == 1}}">
+    <view class="checklist">
+      <view wx:for="{{completedChecks}}" wx:key="index" class="checklist-item">
+        <view class="item-container">
+          <view class="check">
+            <view class="item-header">
+              <text class="item-name">{{item.username}}打卡项目：{{item.check}}</text>
+            </view>
+            <text class="item-description">项目描述：{{item.inf}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="tabBar">
+  <view class="tabBar-item" bindtap="project" data-id="0">
+    <image class="tabBar-icon" src="{{watchImg}}" wx:if="{{choose==1}}"></image>
+    <image class="tabBar-icon" src="{{watchImg1}}" wx:if="{{choose==0}}"></image>
+    <view class="">打卡项目</view>
+  </view>
+  <view class="tabBar-item" bindtap="history" data-id="1">
+    <image class="tabBar-icon" src="{{watchHistoryImg}}" wx:if="{{choose==0}}"></image>
+    <image class="tabBar-icon" src="{{watchHistoryImg1}}" wx:if="{{choose==1}}"></image>
+    <view class="">完成记录</view>
+  </view>
+</view>
+
+<modalDialog bind:inputItem="inputItem" 
+              bind:cancel="cancel" 
+              bind:confirm="confirm" 
+              hiddenmodalput="{{hiddenmodalput}}" 
+              formData="{{formData}}"
+              tip="{{tip}}">
+</modalDialog>

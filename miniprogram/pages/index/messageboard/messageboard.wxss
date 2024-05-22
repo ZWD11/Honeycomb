@@ -1,0 +1,79 @@
+/* pages/index/messageboard/messageboard.wxss */
+.page-section {
+  position: fixed;
+  bottom: 0; /* 固定在底部 */
+  width: 100%;
+}
+
+textarea {
+  width: 700rpx;
+  padding: 20rpx 2px;
+  margin: 8px 8px 8px 0;
+  background: #fff;
+}
+.textarea-wrp {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  padding: 10rpx 25rpx;
+  background: #f5f5f5;
+  bottom: 0; /* 固定在底部 */
+  border-top: 1px solid #ddd;
+}
+.input_content {
+  background: #fff;
+  font-size: 15px;
+  width: 90%;
+  height: 50px;
+  border-radius: 5px; 
+  padding: 8rpx;
+}
+.btn {
+  width: 60px;
+  height: 30px;
+  font-size: 13px;
+  line-height: 30px;
+  margin-top: 0;
+  border-radius: 5px;
+}
+
+.message-list {
+  padding: 20rpx;
+  padding-bottom: 130rpx;  /* 添加底部内边距 */
+}
+
+.message-item {
+  background-color: rgb(248, 211, 217);
+  padding: 20rpx;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.username {
+  font-size: 17px;
+  color: #333;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 13px;
+  color: #999;
+}
+
+.content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.delete {
+  font-size: 13px;
+  color: #999;
+  text-align: right;
+}

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "select": "../../../components/dropselect/select",
+        "totop":"../../../components/totop/totop"
+    },
+    "navigationBarTitleText": "消费记录"
+}

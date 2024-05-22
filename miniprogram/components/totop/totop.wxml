@@ -1,0 +1,5 @@
+<!--components/totop/totop.wxml-->
+<!-- <text>components/totop/totop.wxml</text> -->
+<view class="v" bindtap="totopbtn">
+  <image class="img" src="{{imgSrc}}" bindtap="totopbtn"></image>
+</view>

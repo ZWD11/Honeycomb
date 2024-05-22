@@ -1,0 +1,13 @@
+<!--miniprogram/pages/index/sleepClock/sleepStatistical/sleepStatistical.wxml-->
+<view>
+  <tabBarBtn tabinf="{{tabinf}}" 
+            bind:changeTabs="changeTabs"
+            color="{{'yellow'}}"
+            >
+  </tabBarBtn>
+    <view class="charts">
+        <view class="title">打卡统计</view>
+        <view class="x"></view>
+        <canvas bindtouchstart="touchStart" canvasId="lineCanvas" id="lineCanvas" style="width:100%;height:300px;margin-top:20px;"></canvas>
+    </view>
+</view>

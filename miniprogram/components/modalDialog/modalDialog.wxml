@@ -1,0 +1,31 @@
+<view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{!hiddenmodalput}}"></view>
+<view catchtouchmove="preventTouchMove" class="modal-dialog" wx:if="{{!hiddenmodalput}}">
+    <view class="modal-title">{{tip}}</view>
+    <view class="modal-content">
+      <view wx:for="{{showFormData}}" wx:key="index">
+        <view wx:if="{{!item.hide && item.type=='input'}}" class="modal-input">
+            <input data-ind="{{index}}" bindinput="inputItem" class="input" maxlength="20" placeholder="{{item.placeholder}}" disabled="{{item.disabled}}" placeholderClass="input-holder" type="text" value="{{item.value}}"></input>
+        </view>
+        <view wx:if="{{!item.hide && item.type=='textarea'}}" class="modal-input">
+            <textarea data-ind="{{index}}" bindinput="inputItem" class="input" maxlength="20" placeholder="{{item.placeholder}}" placeholderClass="input-holder" type="text" value="{{item.value}}"></textarea>
+        </view>
+        <view wx:if="{{!item.hide && item.type=='date'}}" class="modal-input">
+            <picker data-ind="{{index}}" bindchange="inputItem" class="input-holder" end="2100-01-01" mode="date" start="{{item.value}}" value="{{item.value}}">
+                <input class="input" disabled="ture" maxlength="20" placeholder="{{item.placeholder}}" placeholderClass="input-holder" type="text" value="{{item.value}}"></input>
+            </picker>
+        </view>
+        <view wx:if="{{!item.hide && item.type=='time'}}" class="modal-input">
+            <picker data-ind="{{index}}" bindchange="inputItem" class="in" mode="time" start="">
+                <input class="input" maxlength="20" placeholder="{{item.placeholder}}" placeholderClass="input-holder" type="text" value="{{item.value}}"></input>
+            </picker>
+        </view>
+        <view wx:if="{{!item.hide && item.type=='text'}}" class="modal-text">
+            {{item.value}}
+        </view>
+      </view>
+    </view>
+    <view class="modal-footer">
+        <view bindtap="cancel" class="btn-cancel" data-status="cancel">{{cancelText || '取消'}}</view>
+        <view bindtap="confirm" class="btn-confirm" data-status="confirm">{{confirmText || '确认'}}</view>
+    </view>
+</view>

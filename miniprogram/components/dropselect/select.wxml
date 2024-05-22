@@ -1,0 +1,14 @@
+
+<view class="select-box">
+    <!-- <scroll-view scroll-y='true' style='width:100%;height:400rpx;display:flex;' wx:if="{{isShow}}"> -->
+        <view catchtap="openClose" class="select-current">
+            <text class="current-name">{{current.name}}</text>
+        </view>
+        <scroll-view catchtap="optionTap" class="option-list" wx:if="{{isShow}}" scroll-y='true' style='width:100%;height:400rpx;display:flex;'>
+            <text class="option" data-id="{{defaultOption.id}}" data-name="{{defaultOption.name}}">{{defaultOption.name}}
+        </text>
+            <text class="option" data-id="{{item.id}}" data-name="{{item.name}}" wx:for="{{result}}" wx:key="{{item.id}}">{{item.name}}
+        </text>
+        </scroll-view>
+    <!-- </scroll-view> -->
+</view>

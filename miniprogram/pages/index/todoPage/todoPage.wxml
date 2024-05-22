@@ -1,0 +1,13 @@
+<tabbarbtn bind:changeTabs="changeTabs" id="tabbarbtn" tabinf="{{tabinf}}"></tabbarbtn>
+<view wx:if="{{tabind==0}}">
+  page0
+</view>
+<view wx:if="{{tabind==1}}">
+  page1
+</view>
+<view wx:if="{{tabind==2}}">
+  page2
+</view>
+<view wx:if="{{tabind==3}}">
+  page3
+</view>

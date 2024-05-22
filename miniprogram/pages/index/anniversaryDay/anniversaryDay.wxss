@@ -1,0 +1,99 @@
+/* miniprogram/pages/index/anniversaryDay/anniversaryDay.wxss */
+.anniversary-day{
+  height: 100vh;
+}
+.bg-img{
+  position: fixed;
+  opacity: 0.4;
+  height: 100vh;
+  pointer-events: none;
+  width: 100vw;
+}
+.linear{
+  background-image: linear-gradient(135deg,red,blue);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color: transparent;
+} 
+.d-text{
+  text-align: center;
+}
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+.item-title{
+  text-align: center;
+}
+.sky-blue{
+  color: skyblue !important; 
+}
+.anniversary-day-content{
+  padding-bottom: 10vh;
+}
+.add-content-body{
+  padding:2.5vw;
+}
+.modal-input {
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+  text-align: center;
+}
+.textarea{
+  min-height: 15vh;
+  text-indent: 2em;
+  padding:5px;
+}
+.add-content-title{
+  text-align: center;
+  padding: 0.5em;
+  background-color: wheat;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+.add-content-footer{
+  display: flex;
+  justify-content: space-around;
+  background-color: skyblue;
+  line-height: 2em;
+  padding: 0.5em;
+}
+.reset-btn{
+  background-color: rgb(204, 201, 197);
+}
+.add-btn{
+  background-color: rgb(238, 154, 44);
+}
+.btn{
+  padding: 0 0.5em;
+  border-radius: 5%;
+}
+.anniversary-day-content-list{
+  padding: 0.5em;
+}
+.anniversary-day-content-list-item{
+  margin-top: 1em;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #E0E3DA;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.hight-light{
+  /* color: gold; */
+  background-image: linear-gradient(135deg,red,blue);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color: transparent;
+  font-size: large;
+}

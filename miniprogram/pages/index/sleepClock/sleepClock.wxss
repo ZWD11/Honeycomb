@@ -1,0 +1,75 @@
+/* miniprogram/pages/index/sleepClock/sleepClock.wxss */
+.bg-img{
+  height: 100vh;
+  width:100vw;
+  position: fixed;
+  opacity: 0.7;
+  top: 0;
+}
+.clock-time{
+  font-size: xxx-large;
+  font-weight: 1000;
+  text-align: center;
+  line-height: 40vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.pre-time{
+  margin-top: 7vh;
+  font-size: medium;
+  text-align: center;
+}
+.clock-btn{
+  width: 40vw;
+  opacity: 0.7;
+  margin-top: 3vh;
+}
+
+.charts {
+  border: 2px solid #2E3E5B;
+  width: 99%;
+  border-radius: 8%;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: darkgray 0px 0px 6px 3px;
+}
+.charts>.charts-btn-list{
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: skyblue;
+  text-decoration: underline;
+}
+.charts>.charts-btn-list>.charts-btn-list-item{
+  flex: 1;
+  text-align: center;
+}
+.charts>.title {
+  margin-top: 20px;
+  margin-left: 15px;
+  color: RGB(46,62,91);
+  text-align: center;
+}
+
+.y {
+  border-right: 2px solid black;
+  position: relative;
+  left: 20px;
+}
+
+.x {
+  border-top: 2px solid black;
+  position: relative;
+  width: 99%;
+  margin: 0 auto;
+}
+
+.image-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  margin-left: 1vw;
+  color: white;
+}

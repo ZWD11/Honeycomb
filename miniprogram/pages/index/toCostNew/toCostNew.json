@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "myCalendar": "../../../components/myCalendar/myCalendar"
+  },
+  "navigationBarTitleText": "消费记录"
+}

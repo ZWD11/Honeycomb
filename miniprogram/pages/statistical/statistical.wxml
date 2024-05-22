@@ -1,0 +1,32 @@
+<view>
+    <view class="charts">
+        <view class="title">按标签统计</view>
+        <view class="x"></view>
+        <canvas bindtouchstart="touchStart" canvasId="pieCanvas" id="pieCanvas" style="width:100%;height:300px;margin-top:20px;"></canvas>
+        <view class="image-parent">
+            <view class="img-group" wx:for="{{byType}}" wx:key="index">
+                <view class="image" style="background-color:{{item.color}};">￥{{item.datas}} </view>
+            </view>
+        </view>
+    </view>
+    <view class="charts">
+        <view class="title">按人统计</view>
+        <view class="x"></view>
+        <canvas bindtouchstart="touchStart" canvasId="pieCanvas1" id="pieCanvas1" style="width:100%;height:300px;margin-top:20px;"></canvas>
+        <view class="image-parent">
+            <view class="img-group" wx:for="{{byPeople}}" wx:key="index">
+                <view class="image" style="background-color:{{item.color}};">￥{{item.datas}} </view>
+            </view>
+        </view>
+    </view>
+    <view class="charts">
+        <view class="title">按周统计</view>
+        <view class="x"></view>
+        <canvas bindtouchstart="touchStart" canvasId="lineCanvas" id="lineCanvas" style="width:100%;height:300px;margin-top:20px;"></canvas>
+    </view>
+    <view class="charts">
+        <view class="title">按月统计</view>
+        <view class="x"></view>
+        <canvas bindtouchstart="touchStart" canvasId="lineCanvas1" id="lineCanvas1" style="width:100%;height:300px;margin-top:20px;"></canvas>
+    </view>
+</view>

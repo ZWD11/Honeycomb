@@ -1,0 +1,21 @@
+<view class="bg"></view>
+<!--miniprogram/pages/index/loopPic/loopPic.wxml-->
+<loopimg id="loopimg" bind:delImg="delImg" mode="aspectFill" originImgUrls="{{imgUrls}}" style="width: 750rpx; height: 698rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 8rpx; object-fit: contain;"></loopimg>
+<!--index.wxml-->
+<view class="container">
+
+<!-- 上传图片 -->
+<view class="uploader">
+  <view class="uploader-text" bindtap="doUpload" style="width: 666rpx; height: 80rpx; display: flex; box-sizing: border-box">
+    <text>上传图片</text>
+  </view>
+  <view class="uploader-container" wx:if="{{imgUrl}}">
+    <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+  </view>
+</view>
+
+<view class="descript" style="width: 750rpx; height: 77rpx; display: block; box-sizing: border-box">
+   点击上传图片可以上传图片，长按图片可以选择删除图片
+</view>
+
+</view>

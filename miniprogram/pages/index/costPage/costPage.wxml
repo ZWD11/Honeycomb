@@ -1,0 +1,71 @@
+<totop></totop>
+<view class="title">消费记录</view>
+<view class="searchview">
+    <view class="searchtag">
+        <select bind:change="change1" id="searchtag" key="_id" options="{{selecttag}}" text="typename"></select>
+    </view>
+    <view class="tagdetail">
+        <select bind:change="change" id="tagdetail" key="_id" options="{{tagdetail}}" text="typename" wx:if="{{selected1.id == 1}}"></select>
+        <picker bindchange="changeDate1" class="input-holder" end="2100-01-01" mode="date" value="{{searchdate}}" wx:if="{{selected1.id == 2}}">
+            <input class="input" disabled="ture" maxlength="20" placeholder="日期" placeholderClass="input-holder" type="text" value="{{searchdate}}"></input>
+        </picker>
+    </view>
+    <view class="searchbtn" bindtap="searchbtn">
+        search
+    </view>
+</view>
+<block wx:for="{{selectdateCost}}" wx:for-item="i" wx:key="index">
+    <view class="divLine"></view>
+    <view class="date">----{{i.date}}----合计：￥{{i.price}}</view>
+    <view class="divLine"></view>
+    <view bindlongpress="delCost" bindtap="click" class="view_tupian_wenzi" data-id="{{index}}" id="{{index}}" style="background-color:{{userConfig[item.username].color}};" wx:if="{{i.date==item.date}}" wx:for="{{selectCost}}" wx:key="index">
+        <image class="image_1" src="{{allCostImg}}"></image>
+        <view class="view_wenzi2" data-id="{{index}}">
+            <text>#{{item.ctype}}--{{userConfig[item.username].nickName}}--￥{{item.price}}</text>
+            <text class="text_small">{{item.time}}</text>
+            <text class="text_small">备注：{{item.mark}}</text>
+            <text class="text_small">{{item.place}}</text>
+        </view>
+    </view>
+</block>
+<view class="zhanwei"></view>
+<view class="tabBar">
+    <view class="tabBar-item" bindanimationend="addCost">
+        <view bindtap="addCost">
+            <image class="tabBar-icon" src="{{costHistory}}"></image>
+        </view>
+        <view bindtap="addCost" class="">添加新记录</view>
+    </view>
+</view>
+<view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{!hiddenmodalput}}"></view>
+<view catchtouchmove="preventTouchMove" class="modal-dialog" wx:if="{{!hiddenmodalput}}">
+    <view class="modal-title">{{tip}}</view>
+    <view class="modal-content">
+        <view class="modal-input">
+            <select bind:change="change" id="select" key="_id" options="{{allType}}" text="typename"></select>
+        </view>
+        <view class="modal-input">
+            <input bindtap="place" class="input" disabled="true" maxlength="20" placeholder="选择地点" placeholderClass="input-holder" type="text" value="{{place}}"></input>
+        </view>
+        <view class="modal-input">
+            <picker bindchange="changeDate" class="input-holder" end="2100-01-01" mode="date" value="{{nowdate}}">
+                <input class="input" disabled="ture" maxlength="20" placeholder="日期" placeholderClass="input-holder" type="text" value="{{nowdate}}"></input>
+            </picker>
+        </view>
+        <view class="modal-input">
+            <picker bindchange="changeTime" class="in" mode="time" start="">
+                <input class="input" disabled="ture" maxlength="20" placeholder="具体时间" placeholderClass="input-holder" type="text" value="{{nowtime}}"></input>
+            </picker>
+        </view>
+        <view class="modal-input">
+            <input bindinput="inputPrice" class="input" maxlength="20" placeholder="消费金额" placeholderClass="input-holder" type="text" value="{{price}}"></input>
+        </view>
+        <view class="modal-input">
+            <input bindinput="inputTheme" class="input" maxlength="20" placeholder="备注" placeholderClass="input-holder" type="text" value="{{theme}}"></input>
+        </view>
+    </view>
+    <view class="modal-footer">
+        <view bindtap="cancel" class="btn-cancel" data-status="cancel">取消</view>
+        <view bindtap="confirm" class="btn-confirm" data-status="confirm">确定</view>
+    </view>
+</view>

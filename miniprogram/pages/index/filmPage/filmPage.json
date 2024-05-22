@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "modalDialog": "../../../components/modalDialog/modalDialog"
+    },
+    "navigationBarTitleText": "观影"
+}

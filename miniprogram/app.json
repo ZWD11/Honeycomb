@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/statistical/statistical",
+    "pages/index/typePage/typePage",
+    "pages/index/costPage/costPage",
+    "pages/index/filmPage/filmPage",
+    "pages/index/todoPage/todoPage",
+    "pages/index/wishTreePage/wishTreePage",
+    "pages/index/physiologicalPeriodPage/physiologicalPeriodPage",
+    "pages/index/toCostNew/toCostNew",
+    "pages/index/toCostNew/formList/formList",
+    "pages/index/sleepClock/sleepClock",
+    "pages/index/sleepClock/sleepStatistical/sleepStatistical",
+    "pages/index/anniversaryDay/anniversaryDay",
+    "pages/index/loopPic/loopPic",
+    "pages/index/passwordBox/passwordBox",
+    "pages/index/messageboard/messageboard",
+    "pages/index/checklist/checklist"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "我和我的乖乖",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#6cf",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/首页1.png",
+        "selectedIconPath": "icon/首页.png"
+      },
+      {
+        "pagePath": "pages/statistical/statistical",
+        "text": "统计",
+        "iconPath": "icon/统计.png",
+        "selectedIconPath": "icon/统计1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "icon/我的1.png",
+        "selectedIconPath": "icon/我的.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap89.json"
+}

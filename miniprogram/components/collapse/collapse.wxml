@@ -1,0 +1,6 @@
+<!--components/collapse/collapse.wxml-->
+<!-- <text>components/collapse/collapse.wxml</text> -->
+<view>
+  111
+  <slot></slot>
+</view>

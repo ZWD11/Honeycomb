@@ -1,0 +1,24 @@
+/* miniprogram/pages/index/loopPic/loopPic.wxss */
+.descript{
+  padding:1em;
+  font-size: 14px;
+  justify-content: center; 
+  color: rgb(209, 94, 28);
+  font-weight: 650;
+}
+
+.uploader-text {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.bg{
+  background-color:pink;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

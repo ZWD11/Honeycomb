@@ -1,0 +1,9 @@
+<view class="tabBar">
+    <view bindtap="changeTab" class="tabBar-item" data-id="{{item.id}}" wx:for="{{tabinf}}" wx:key="index">
+        <view>
+            <image class="tabBar-icon" src="{{item.img}}" wx:if="{{tabind!=item.id}}"></image>
+            <image class="tabBar-icon" src="{{item.img1}}" wx:if="{{tabind==item.id}}"></image>
+        </view>
+        <view bindtap="changeTab" class="" data-id="{{item.id}}" style="color:{{tabind==item.id ? color : color1}};">{{item.title}}</view>
+    </view>
+</view>

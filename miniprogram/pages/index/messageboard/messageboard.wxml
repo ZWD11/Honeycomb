@@ -1,0 +1,17 @@
+<!--pages/index/messageboard/messageboard.wxml-->
+<view class="page-section" style="position: fixed; bottom: {{inputBottom}}px;">
+  <view class="textarea-wrp" auto-height style="display: flex; box-sizing: border-box;">
+    <textarea class="input_content" auto-height bindinput="handleInput" value="{{inputValue}}" placeholder="说点什么吧..."></textarea>
+    <button type="primary" bindtap="sendComment" class="btn">发送</button>
+  </view>
+</view>
+<view class="message-list">
+  <view class="message-item" wx:for="{{messages}}" wx:key="id" auto-height>
+    <view class="user-info">
+      <text class="username">{{item.username}}</text>
+      <text class="time">{{item.achivetime}} </text>
+    </view>
+    <text class="content">{{item.something}}\n</text>
+    <text class="delete" data-id="{{item._id}}" bindtap="deleteMessage">删除</text>
+  </view>
+</view>

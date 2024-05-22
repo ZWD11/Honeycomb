@@ -1,0 +1,49 @@
+<view wx:if="{{choose==0}}">
+    <calendar bind:select="select" bind:today="today" id="calendar"></calendar>
+    <view bindtap="calendarBtn" class="addbtn" style="width: 176rpx; height: 70rpx; display: block; box-sizing: border-box; background-color:pink; color: #fff; padding: 10rpx 20rpx; position: relative; left: 286rpx; top: 0rpx; border-radius: 23%;">{{title}}</view>
+    <view class="addbtn" style="width: 750rpx; height: 44rpx; display: block; box-sizing: border-box">{{selectdate}}</view>
+</view>
+<view wx:if="{{choose==1}}" class="tab-page">
+    <view class="huizong">汇总统计</view>
+    <view class="hz">
+      上次辛苦日为：{{lastday}},距今{{distance}}天
+    </view>
+    <view class="hz">
+    预计下次辛苦日为：{{nextPeriodDate}}
+    </view>
+    <view class="hzlists" wx:for="{{huizong}}">
+        <view class="hzcard">
+            <view class="hzind">{{index+1}}</view>
+            <view class="hzdn">
+                <view class="hzdate">{{item.date}}</view>
+                <view class="hznum">共{{item.num}}天</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="tabBar">
+    <view class="tabBar-item">
+        <view bindtap="changeTab" data-id="0">
+            <image class="tabBar-icon" src="{{flagImg}}" wx:if="{{choose==1}}"></image>
+            <image class="tabBar-icon" src="{{flagImg1}}" wx:if="{{choose==0}}"></image>
+        </view>
+        <view bindtap="changeTab" class="" data-id="0">标记</view>
+    </view>
+    <view class="tabBar-item">
+        <view bindtap="changeTab" data-id="1">
+            <image class="tabBar-icon" src="{{allImg}}" wx:if="{{choose==0}}"></image>
+            <image class="tabBar-icon" src="{{allImg1}}" wx:if="{{choose==1}}"></image>
+        </view>
+        <view bindtap="changeTab" class="" data-id="1">汇总</view>
+    </view>
+</view>
+<modalDialog bind:inputItem="inputItem" 
+            bind:cancel="cancel" 
+            bind:confirm="confirm" 
+            bind:hideModal="hideModal"
+            hiddenmodalput="{{hiddenmodalput}}" 
+            formData="{{formData}}"
+            cancelText="{{cancelText}}"
+            confirmText="{{confirmText}}"
+            tip="{{title}}">
+</modalDialog>

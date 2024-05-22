@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "collapse":"../../../../components/collapse/collapse"
+  },
+  "navigationBarTitleText": "表单管理"
+}
