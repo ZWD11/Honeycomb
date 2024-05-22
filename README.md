@@ -27,53 +27,6 @@
 
 1.[手把手教学，从零到一打造一款专属的情侣小程序](https://blog.csdn.net/Twinkle_sone/article/details/121484742)
 
-### 预览
-
-#### 首页
-
-![输入图片说明](README-IMG/1651486239(1).png)
-
-#### 轮播图
-
-![输入图片说明](README-IMG/1651655524(1).png)
-
-可以动态更新轮播图图片。
-
-#### 消费记录（表单版）
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/87f4c523d1b14d188ec918d47e4342ec.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU0FET05fanVuZw==,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-自己设计表单，每天根据表单项来记录消费。
-
-#### 睡觉打卡
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/482bfd59597a4849a780672745e73ff8.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU0FET05fanVuZw==,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-统计睡觉规律。
-
-#### 消费记录（详细记录版）
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fed9d95434584af18a23dd71dfad82a7.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU0FET05fanVuZw==,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-详细记录消费内容。
-
-#### 纪念日
-
-![输入图片说明](README-IMG/1651486096(1).png)
-
-可以自己设置纪念日。
-
-#### 辛苦日记录
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cb2b3ce0389c4ab9a899e3aea56b43c5.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU0FET05fanVuZw==,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-记录生理期时间，同时可以根据多次的记录判断下次生理期时间。
-
-#### 许愿树
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f37efa327e5946ffa0de8cfe598a26de.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU0FET05fanVuZw==,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-可以在这里悄悄的写上自己的心愿，等待被发现然后帮你实现。
 
 ### 准备
 
