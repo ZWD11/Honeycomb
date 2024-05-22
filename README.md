@@ -61,8 +61,6 @@
 #### 2、设置账号信息
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2fa598032072499594800d299c4fc77d.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU0FET05fanVuZw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-
 因为是自用的，所以也就没有将账号信息存放到数据库中，而是保存为一个用户配置文件，文件位置如上图。userConfig对象中的key对应账号，password则是密码，nickName为在小程序中显示的昵称，eName是英文别名（这里是随便起的），color为代表色，icon是代表图表，wishIcon为许愿树模块中的礼物盒图标，将账号信息配置好即可登录小程序。
 
 #### 3、上传图片并修改路径
