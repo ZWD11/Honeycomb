@@ -21,7 +21,7 @@
 7.  运行代码
 
 ## 资源
-[项目图片资源下载](https://gitee.com/zheng_yongtao/images-package.git)
+[项目图片资源下载](https://www.alipan.com/s/qEzpD43vjXi)
 
 ## 使用说明
 
@@ -42,7 +42,7 @@
 
 [https://developers.weixin.qq.com/miniprogram/dev/framework/](https://developers.weixin.qq.com/miniprogram/dev/framework/)
 
-代码地址（不完善版本）
+代码地址（待完善版本）
 
 [https://gitee.com/zheng_yongtao/me-and-my-doodle.git](https://gitee.com/zheng_yongtao/me-and-my-doodle.git)
 
@@ -65,7 +65,7 @@
 
 #### 3、上传图片并修改路径
 
-图片包地址：[https://gitee.com/zheng_yongtao/images-package.git](https://gitee.com/zheng_yongtao/images-package.git)
+图片包地址：[https://www.alipan.com/s/qEzpD43vjXi](https://www.alipan.com/s/qEzpD43vjXi)
 
 因为一开始只是为了做一个记账本功能的小程序，所以我在云存储中创建了一个记账本文件夹，如下图：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/18b45506a7514a83a26934ff3babae80.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU0FET05fanVuZw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
@@ -95,7 +95,6 @@
 #### 6、上传代码为体验版
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/25d2d3abb232427abff9ba39cdad64da.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU0FET05fanVuZw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
 
 上传之后代码可以在自己的小程序后台看到上传的版本，目前个人不支持上传为线上版本，所以我们只能使用体验版，设置为体验版的方法如下：
 微信小程序管理后台地址：[https://mp.weixin.qq.com/wxamp/wacodepage/getcodepage?token=1210542861&lang=zh_CN](https://mp.weixin.qq.com/wxamp/wacodepage/getcodepage?token=1210542861&lang=zh_CN)
