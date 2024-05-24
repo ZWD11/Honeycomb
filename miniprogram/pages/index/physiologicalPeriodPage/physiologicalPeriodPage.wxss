@@ -1,81 +1,153 @@
-.addbtn {
+.calendar-container {
+  padding-bottom: 20rpx;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx;
+}
+
+.input-container input {
+  border: 1px solid #ccc;
+  border-radius: 5rpx;
+  padding: 5rpx;
+  margin-left: 10rpx;
+}
+
+.predict-date {
   text-align: center;
+  font-size: 30rpx;
+  color: #FF69B4;
+  margin-top: 20rpx;
+}
+
+.addbtn {
+  width: 176rpx;
+  height: 70rpx;
+  display: block;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 10rpx 20rpx;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0rpx;
+  border-radius: 23%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.select-date {
+  text-align: center;
+  margin-bottom: 20rpx;
 }
 
 .tabBar-icon {
-    width: 54rpx;
-    height: 54rpx;
+  width: 54rpx;
+  height: 54rpx;
+  margin: 0 auto 10rpx;
 }
 
 .tabBar {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    padding: 10rpx;
-    margin-left: -4rpx;
-    background: pink;
-    font-size: 24rpx;
-    color: #8A8A8A;
-    box-shadow: 3rpx 3rpx 3rpx 3rpx #aaa;
-    z-index: 9999;
-    display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx;
+  background: #FFE4E1;
+  font-size: 24rpx;
+  color: #8A8A8A;
+  box-shadow: 3rpx 3rpx 3rpx 3rpx #aaa;
+  z-index: 9999;
+  display: flex;
 }
 
 .tabBar-item {
-    float: left;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
+  flex: 1;
+  text-align: center;
 }
 
 .hzlists {
-    margin-top: 2vh;
+  margin-top: 2vh;
 }
 
 .hzlists .hzcard {
-    display: flex;
+  display: flex;
+  margin-bottom: 20rpx;
 }
 
 .hzlists .hzcard .hzind {
-    border: solid black 1px;
-    height: 20px;
-    width: 20px;
-    text-align: center;
-    line-height: 20px;
-    border-radius: 50% 50%;
-    margin-left: 5vw;
-    margin-top: 3vh;
-    background-color: pink;
+  border: solid black 1px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50% 50%;
+  margin-left: 5vw;
+  margin-top: 3vh;
+  background-color: #FFC0CB;
 }
 
 .hzlists .hzcard .hzdn {
-    border: solid black 1px;
-    height: 10vh;
-    margin-left: 3vw;
-    width: 80vw;
-    border-radius: 5% 5%;
-    background-color: pink;
+  border: solid black 1px;
+  height: 10vh;
+  margin-left: 3vw;
+  width: 80vw;
+  border-radius: 5% 5%;
+  background-color: #FFC0CB;
+  padding: 10rpx;
 }
 
 .hzlists .hzcard .hzdate {
-    text-align: center;
-    line-height: 5vh;
+  text-align: center;
+  line-height: 5vh;
 }
 
 .hzlists .hzcard .hznum {
-    text-align: center;
-    line-height: 5vh;
+  text-align: center;
+  line-height: 5vh;
 }
 
 .huizong {
-    text-align: center;
-    font-weight: bold;
-    margin: 0 3vh;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 3vh;
 }
 
 .hz {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 20rpx;
 }
-.tab-page{
-    padding-bottom: 10vh;
+
+.tab-page {
+  padding-bottom: 10vh;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* 页面高度的80% */
+}
+
+.empty-image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #8A8A8A;
+  margin-bottom: 10rpx;
+}
+
+.summary-card {
+  background-color: #FFF0F5; /* 淡粉色 */
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1); 
+  margin: 20rpx;
 }
