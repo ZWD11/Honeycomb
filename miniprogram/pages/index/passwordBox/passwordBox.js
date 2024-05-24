@@ -3,10 +3,6 @@ const app = getApp();
 const ase = require('../../../utils/ase');
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
     
   data: {
     nickName:app.getShowName(),
@@ -15,6 +11,8 @@ Page({
     firstPassword:'',
     isPass:false,
     secretKey:'十六位十六进制数作为秘钥',
+    inputSecretKey: '', // 用于存储输入的秘钥
+    unlockType: 'pattern', // 解锁方式，默认为图案解锁
     formData:[
       {
           name:'platform',
@@ -68,6 +66,35 @@ Page({
   onPasswordBlur() {
     document.body.style.overflow = 'auto';
   },
+    // 切换解锁方式
+    changeUnlockType: function() {
+      this.setData({
+        unlockType: this.data.unlockType === 'pattern' ? 'secretKey' : 'pattern'
+      })
+    },
+  
+    // 秘钥输入框输入事件
+    onSecretKeyInput: function(e) {
+      this.setData({
+        inputSecretKey: e.detail.value
+      })
+    },
+  
+    // 秘钥确定按钮点击事件
+    onSecretKeyConfirm: function() {
+      if (this.data.inputSecretKey === this.data.secretKey) {
+        // 秘钥正确，进入密码柜页面
+        this.setData({
+          isPass: true
+        })
+      } else {
+        wx.showToast({
+          title: '秘钥错误',
+          icon: 'none'
+        })
+      }
+    },
+  
   inputItem:function(e){
       let formData = this.data.formData;
       formData[e.detail.ind].value = e.detail.val;
@@ -321,6 +348,10 @@ Page({
     })
   },
   getPassword(e){
+    if (this.data.unlockType === 'secretKey') {
+      // 如果当前是秘钥解锁模式，则不处理图案密码
+      return;
+    }
     let chooseList = e.detail.chooseList.join('-');
     if(chooseList == '') return;
     let firstPassword = '';
@@ -388,54 +419,5 @@ Page({
   onLoad: function (options) {
     this.initData();
     this.getMyPassword();
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })
